@@ -1,0 +1,14 @@
+<idea-plugin>
+  <id>com.omnimarkdown.plugin</id>
+  <name>Omni Markdown</name>
+  <vendor>Local</vendor>
+  <description>Live split-view preview for .md files with Mermaid diagram support.</description>
+
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Registers a custom split editor for .md files -->
+    <fileEditorProvider
+        implementation="com.mdpreview.plugin.editor.MarkdownPreviewEditorProvider"/>
+  </extensions>
+</idea-plugin>
