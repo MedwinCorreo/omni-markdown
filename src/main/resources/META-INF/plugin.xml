@@ -6,6 +6,9 @@
 
   <depends>com.intellij.modules.platform</depends>
 
+  <!-- Prevent IntelliJ's bundled Markdown plugin from adding a duplicate preview tab -->
+  <incompatible-with>org.intellij.plugins.markdown</incompatible-with>
+
   <extensions defaultExtensionNs="com.intellij">
     <!-- Registers a custom split editor for .md files -->
     <fileEditorProvider
