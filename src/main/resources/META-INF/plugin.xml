@@ -11,4 +11,25 @@
     <fileEditorProvider
         implementation="com.mdpreview.plugin.editor.MarkdownPreviewEditorProvider"/>
   </extensions>
+
+  <actions>
+    <group id="OmniMarkdown.EditorToolbar" text="Omni Markdown" popup="false">
+      <action id="OmniMarkdown.ShowCodeOnly"
+              class="com.mdpreview.plugin.action.ShowCodeOnlyAction"
+              text="Code Only"
+              description="Show only the code editor"
+              icon="AllIcons.Actions.Edit"/>
+      <action id="OmniMarkdown.ShowSplit"
+              class="com.mdpreview.plugin.action.ShowSplitAction"
+              text="Split View"
+              description="Show code and preview side by side"
+              icon="AllIcons.Actions.SplitHorizontally"/>
+      <action id="OmniMarkdown.ShowPreviewOnly"
+              class="com.mdpreview.plugin.action.ShowPreviewOnlyAction"
+              text="Preview Only"
+              description="Show only the rendered preview"
+              icon="AllIcons.Actions.Preview"/>
+      <add-to-group group-id="EditorTabActionGroup" anchor="last"/>
+    </group>
+  </actions>
 </idea-plugin>
